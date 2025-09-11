@@ -24,7 +24,7 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Subtle forest-tech background */
+/* Paw overlay for subtle forest-tech feel */
 body::before {
   content: "";
   position: fixed;
@@ -38,14 +38,14 @@ body::before {
 }
 
 /* Headers */
-h1, h2 {
+h1, h2, h3 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   color: #1f2937;
   text-transform: uppercase;
 }
 
-/* Glowing gradient buttons */
+/* Buttons */
 .btn-primary {
   background: linear-gradient(90deg, #10b981, #3b82f6);
   color: white;
@@ -62,20 +62,6 @@ h1, h2 {
   box-shadow: 0 6px 25px rgba(16, 185, 129, 0.5);
 }
 
-/* Hero Section */
-.hero-title {
-  font-size: 2.5rem;
-  line-height: 1.2;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-}
-.hero-subtitle {
-  font-size: 1.25rem;
-  font-weight: 600;
-  background: linear-gradient(90deg, #10b981, #3b82f6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 /* Video wrapper */
 .video-wrapper {
   position: relative;
@@ -84,7 +70,6 @@ h1, h2 {
   overflow: hidden;
   border-radius: 1rem;
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  margin-bottom: 1rem;
 }
 .video-wrapper iframe {
   position: absolute;
@@ -186,14 +171,12 @@ footer {
 <body>
 
 <!-- Header -->
-<header class="sticky top-0 z-50 py-4 px-6 text-center bg-gradient-to-r from-green-500 to-blue-500 shadow-md">
+<header class="sticky top-0 z-50 py-4 px-6 text-center" style="background: linear-gradient(135deg, #10b981, #3b82f6);">
   <h1 class="text-3xl font-bold text-white">The Lone Wolf</h1>
 </header>
 
 <!-- Hero -->
-<section class="relative px-4 py-32 max-w-6xl mx-auto text-center overflow-hidden rounded-xl" data-aos="fade-up" style="background: linear-gradient(135deg, #10b981, #3b82f6);">
-  
-  <!-- Subtle Paw Print Overlay -->
+<section class="relative px-4 py-32 max-w-6xl mx-auto text-center rounded-xl overflow-hidden" data-aos="fade-up" style="background: linear-gradient(135deg, #10b981, #3b82f6);">
   <div class="absolute inset-0" style="
     background-image: url('https://cdn.pixabay.com/photo/2017/07/06/20/41/paw-2485277_1280.png');
     background-repeat: repeat;
@@ -202,18 +185,15 @@ footer {
     pointer-events: none;
     z-index: 0;
   "></div>
-
-  <!-- Content Wrapper -->
   <div class="relative z-10 text-white">
-    <h2 class="hero-title mb-4">Crafting, Tail Making, Mask Making & More</h2>
-    <p class="hero-subtitle mb-6">Explore our channel for tutorials, creative videos, and community fun. Discover the art of furry crafting in a techy, forest-inspired environment.</p>
-    <div class="video-wrapper">
+    <h2 class="hero-title text-4xl md:text-5xl font-bold mb-4">Crafting, Tail Making, Mask Making & More</h2>
+    <p class="text-lg md:text-xl mb-6">Explore our channel for tutorials, creative videos, and community fun. Discover the art of furry crafting in a techy, forest-inspired environment.</p>
+    <div class="video-wrapper mb-6">
       <iframe src="https://www.youtube.com/embed/YzFsDUtcQno?si=W8AU2g9WvrHQ0HM-" title="Featured Video" allowfullscreen></iframe>
     </div>
-    <a href="https://www.youtube.com/@thelonewolf-AS" target="_blank" class="btn-primary mt-6 inline-block">Subscribe on YouTube</a>
+    <a href="https://www.youtube.com/@thelonewolf-AS" target="_blank" class="btn-primary mt-4 inline-block">Subscribe on YouTube</a>
   </div>
 </section>
-
 
 <!-- Current Tail & Mask -->
 <section class="px-4 py-24 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8" data-aos="fade-up">
@@ -233,19 +213,16 @@ footer {
 <section class="px-4 py-24 max-w-6xl mx-auto" data-aos="fade-up">
   <h2 class="text-3xl font-bold text-center mb-12">Curated Videos</h2>
   <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-
-    <!-- Example Video Card 1 -->
     <div class="video-card" data-aos="fade-up">
       <a href="https://www.youtube.com/watch?v=57c_BZcYe3E" target="_blank">
         <img src="https://img.youtube.com/vi/57c_BZcYe3E/hqdefault.jpg" alt="Video Title 1">
       </a>
       <div class="video-card-content">
         <h4>How To Make a Wolf Tail</h4>
-        <p>Materials: Yarn, Something to wind up the yarn, a rubber band (optional), scissors, keychain attachment.<br>Channel of the day: @sharkbite-as</p>
+        <p>Materials: Yarn, rubber band, scissors, keychain attachment.</p>
         <a href="https://www.youtube.com/watch?v=57c_BZcYe3E" target="_blank">Watch Now →</a>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -253,27 +230,22 @@ footer {
 <section class="px-4 py-24 max-w-6xl mx-auto" data-aos="fade-up">
   <h2 class="text-3xl font-bold text-center mb-12">Fun Stats</h2>
   <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
-
     <div class="counter-card card p-6">
       <div class="text-3xl font-bold text-green-500" data-count="4">0</div>
       <p>Videos Uploaded</p>
     </div>
-
     <div class="counter-card card p-6">
       <div class="text-3xl font-bold text-amber-500" data-count="5">0</div>
       <p>Projects Completed</p>
     </div>
-
     <div class="counter-card card p-6">
       <div class="text-3xl font-bold text-blue-500" data-count="0.6">0</div>
       <p>Years of Crafting</p>
     </div>
-
     <div class="counter-card card p-6">
       <div class="text-3xl font-bold text-purple-500" data-count="6">0</div>
       <p>Subscribers</p>
     </div>
-
   </div>
 </section>
 
@@ -283,6 +255,23 @@ footer {
   <p class="text-lg leading-relaxed">
     The Lone Wolf is your space for creative tutorials, mask and tail making, and exploring furry arts. Enjoy techy, modern, and forest-inspired visuals while learning new crafts.
   </p>
+</section>
+
+<!-- Get Downloads -->
+<section class="px-4 py-24 max-w-6xl mx-auto" data-aos="fade-up">
+  <h2 class="text-3xl font-bold text-center mb-12">Downloadables</h2>
+  <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="card p-4">
+      <h3>Coloring Pages</h3>
+      <p>Download fun Lone Wolf coloring pages for your creative adventures!</p>
+      <a href="/downloads/coloring1.pdf" class="btn-primary mt-2 inline-block">Download →</a>
+    </div>
+    <div class="card p-4">
+      <h3>Stickers</h3>
+      <p>Print and cut your own Lone Wolf stickers. No cutter required, just fun!</p>
+      <a href="/downloads/stickers1.pdf" class="btn-primary mt-2 inline-block">Download →</a>
+    </div>
+  </div>
 </section>
 
 <!-- Contact -->
@@ -303,10 +292,10 @@ footer {
 // Year
 document.getElementById("year").textContent = new Date().getFullYear();
 
-// AOS animations
+// AOS
 AOS.init({duration:800, easing:'ease-in-out', once:true});
 
-// Animate counters when they come into view
+// Animate counters when in view
 function animateCountersOnView() {
   const counters = document.querySelectorAll('[data-count]');
   const observer = new IntersectionObserver(entries => {
@@ -315,24 +304,19 @@ function animateCountersOnView() {
         const counter = entry.target;
         const target = +counter.getAttribute('data-count');
         let count = 0;
-
         const updateCount = () => {
           let increment = Math.ceil((target - count) * 0.1);
           if(increment < 1) increment = 1;
           count += increment;
           if(count > target) count = target;
           counter.innerText = count;
-          if(count < target) {
-            requestAnimationFrame(updateCount);
-          }
+          if(count < target) requestAnimationFrame(updateCount);
         };
-
         updateCount();
         observer.unobserve(counter);
       }
     });
   }, { threshold: 0.5 });
-
   counters.forEach(counter => observer.observe(counter));
 }
 
