@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Lone Wolf - Fun & Crafty</title>
+<title>The Lone Wolf - Craft & Creativity</title>
 
 <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
 
 <!-- Tailwind CDN -->
 <script src="https://cdn.tailwindcss.com"></script>
@@ -18,68 +18,84 @@
 
 <style>
 body {
-  font-family: 'Comic Neue', sans-serif;
-  background: #fdfaf6;
+  font-family: 'Open Sans', sans-serif;
+  background: #fefcf5;
   color: #1f2937;
   scroll-behavior: smooth;
 }
 
-/* Playful paw background */
+/* Subtle forest-tech background */
 body::before {
   content: "";
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top:0; left:0; right:0; bottom:0;
   background-image: url('https://cdn.pixabay.com/photo/2017/07/06/20/41/paw-2485277_1280.png');
   background-repeat: repeat;
-  background-size: 100px 100px;
+  background-size: 80px 80px;
   opacity: 0.03;
   pointer-events: none;
   z-index: -1;
 }
 
-/* Buttons */
-.btn-primary {
-  background: linear-gradient(45deg, #facc15, #22d3ee);
+/* Headers */
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
   color: #1f2937;
+  text-transform: uppercase;
+}
+
+/* Glowing gradient buttons */
+.btn-primary {
+  background: linear-gradient(90deg, #10b981, #3b82f6);
+  color: white;
   font-weight: 700;
   padding: 0.75rem 1.5rem;
   border-radius: 9999px;
   display: inline-block;
-  transition: transform 0.2s ease, filter 0.2s ease;
+  transition: all 0.3s ease;
   text-decoration: none;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
 }
 .btn-primary:hover {
-  transform: rotate(-2deg) scale(1.05);
-  filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.2));
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(16, 185, 129, 0.5);
 }
 
-/* Hero header */
-h1, h2 {
-  font-family: 'Press Start 2P', cursive;
-  text-transform: uppercase;
+/* Hero Section */
+.hero-title {
+  font-size: 2.5rem;
+  line-height: 1.2;
 }
 
-/* Wobbly effect for headers */
-.wobble {
-  display: inline-block;
-  animation: wobble 1s infinite;
+/* Video wrapper */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
-@keyframes wobble {
-  0%, 100% { transform: rotate(-2deg); }
-  50% { transform: rotate(2deg); }
+.video-wrapper iframe {
+  position: absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  border:none;
+  border-radius:1rem;
 }
 
-/* Video cards */
+/* Video Cards */
 .video-card {
   background: #fff;
   border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .video-card:hover {
-  transform: rotate(-2deg) scale(1.05);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 .video-card img {
   width: 100%;
@@ -98,34 +114,51 @@ h1, h2 {
 .video-card-content p {
   font-size: 0.875rem;
   color: #555;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
+}
+.video-card-content a {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #10b981;
+  text-decoration: none;
+}
+.video-card-content a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #555;
+  background-color: #e7e5e4;
+  margin-top: 3rem;
 }
 </style>
 </head>
 <body>
 
 <!-- Header -->
-<header class="bg-gradient-to-r from-pink-400 via-purple-500 to-blue-400 text-white sticky top-0 z-50 shadow-md p-4 text-center" data-aos="fade-down">
-  <h1 class="text-3xl wobble">The Lone Wolf</h1>
+<header class="bg-white sticky top-0 z-50 shadow-md py-4 px-6 text-center" data-aos="fade-down">
+  <h1 class="text-3xl">The Lone Wolf</h1>
 </header>
 
 <!-- Hero -->
-<section class="px-4 py-24 text-center max-w-4xl mx-auto" data-aos="fade-up">
-  <h2 class="text-3xl mb-6 wobble">Welcome to The Lone Wolf</h2>
-  <p class="text-lg mb-6">Crafting, tail making, mask making & more. Fun videos for fellow creatives!</p>
-  <div class="max-w-xl mx-auto mb-6">
-    <div class="relative" style="padding-bottom:56.25%; height:0; overflow:hidden; border-radius:1rem; box-shadow:0 10px 20px rgba(0,0,0,0.1);">
-      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Featured Video" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;border-radius:1rem;" allowfullscreen></iframe>
-    </div>
+<section class="px-4 py-24 max-w-4xl mx-auto text-center" data-aos="fade-up">
+  <h2 class="hero-title mb-6">Crafting, Tail Making, Mask Making & More</h2>
+  <p class="text-lg mb-6">Explore our channel for tutorials, creative videos, and community fun. Discover the art of furry crafting in a techy, forest-inspired environment.</p>
+  <div class="video-wrapper mb-6">
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Featured Video" allowfullscreen></iframe>
   </div>
   <a href="https://www.youtube.com/@thelonewolf-AS" target="_blank" class="btn-primary">Subscribe on YouTube</a>
 </section>
 
-<!-- Videos -->
+<!-- Curated Videos -->
 <section class="px-4 py-24 max-w-6xl mx-auto" data-aos="fade-up">
-  <h2 class="text-3xl text-center font-bold mb-12 wobble">Curated Videos</h2>
+  <h2 class="text-3xl font-bold text-center mb-12">Curated Videos</h2>
   <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-    
+
     <!-- Example Video Card 1 -->
     <div class="video-card" data-aos="fade-up">
       <a href="https://www.youtube.com/watch?v=VIDEO_ID_1" target="_blank">
@@ -134,7 +167,7 @@ h1, h2 {
       <div class="video-card-content">
         <h4>Video Title 1</h4>
         <p>Short description of the video goes here.</p>
-        <a href="https://www.youtube.com/watch?v=VIDEO_ID_1" target="_blank" class="text-pink-500 font-semibold hover:underline text-sm">Watch Now →</a>
+        <a href="https://www.youtube.com/watch?v=VIDEO_ID_1" target="_blank">Watch Now →</a>
       </div>
     </div>
 
@@ -146,7 +179,7 @@ h1, h2 {
       <div class="video-card-content">
         <h4>Video Title 2</h4>
         <p>Short description of the video goes here.</p>
-        <a href="https://www.youtube.com/watch?v=VIDEO_ID_2" target="_blank" class="text-purple-500 font-semibold hover:underline text-sm">Watch Now →</a>
+        <a href="https://www.youtube.com/watch?v=VIDEO_ID_2" target="_blank">Watch Now →</a>
       </div>
     </div>
 
@@ -158,7 +191,7 @@ h1, h2 {
       <div class="video-card-content">
         <h4>Video Title 3</h4>
         <p>Short description of the video goes here.</p>
-        <a href="https://www.youtube.com/watch?v=VIDEO_ID_3" target="_blank" class="text-blue-500 font-semibold hover:underline text-sm">Watch Now →</a>
+        <a href="https://www.youtube.com/watch?v=VIDEO_ID_3" target="_blank">Watch Now →</a>
       </div>
     </div>
 
@@ -167,23 +200,23 @@ h1, h2 {
 
 <!-- About -->
 <section class="px-4 py-24 max-w-4xl mx-auto text-center" data-aos="fade-up">
-  <h2 class="text-3xl font-bold mb-6 wobble">About The Channel</h2>
+  <h2 class="text-3xl font-bold mb-6">About The Channel</h2>
   <p class="text-lg leading-relaxed">
-    The Lone Wolf is your playground for crafting tutorials, mask and tail making, and creative fun. Comment on videos to see your ideas featured!
+    The Lone Wolf is your space for creative tutorials, mask and tail making, and exploring furry arts. Enjoy techy, modern, and forest-inspired visuals while learning new crafts.
   </p>
 </section>
 
 <!-- Contact -->
 <section class="px-4 py-24 max-w-4xl mx-auto text-center" data-aos="fade-up">
-  <h2 class="text-3xl font-bold mb-6 wobble">Get in Touch</h2>
+  <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
   <p class="text-lg leading-relaxed mb-6">
-    Have ideas, questions, or requests? Drop a comment on any YouTube video—your feedback might inspire the next feature!
+    Have ideas or requests? Comment on our YouTube videos and your ideas might be featured in the next project!
   </p>
   <a href="https://www.youtube.com/@thelonewolf-AS" target="_blank" class="btn-primary">Visit YouTube Channel</a>
 </section>
 
 <!-- Footer -->
-<footer class="bg-gray-200 text-gray-700 text-center py-6">
+<footer>
   &copy; <span id="year"></span> The Lone Wolf. All rights reserved.
 </footer>
 
