@@ -315,28 +315,31 @@ function animateCountersOnView() {
         const counter = entry.target;
         const target = +counter.getAttribute('data-count');
         let count = 0;
-        const increment = Math.ceil(target / 100);
 
         const updateCount = () => {
+          // Calculate increment as 10% of remaining value
+          let increment = Math.ceil((target - count) * 0.1);
+          if(increment < 1) increment = 1; // Ensure it always moves
+
+          count += increment;
+          if(count > target) count = target;
+          counter.innerText = count;
+
           if(count < target) {
-            count += increment;
-            if(count > target) count = target;
-            counter.innerText = count;
             requestAnimationFrame(updateCount);
           }
         };
+
         updateCount();
-        observer.unobserve(counter); // Stop observing once animated
+        observer.unobserve(counter); // Animate only once
       }
     });
-  }, { threshold: 0.5 }); // Trigger when 50% of the counter is visible
+  }, { threshold: 0.5 });
 
   counters.forEach(counter => observer.observe(counter));
 }
 
 window.addEventListener('load', animateCountersOnView);
-
-window.addEventListener('load', animateCounters);
 </script>
 
 </body>
