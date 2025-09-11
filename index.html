@@ -85,6 +85,36 @@ h1, h2 {
   border-radius:1rem;
 }
 
+/* Cards for Tail/Mask/Stats */
+.card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+.card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+.card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0.75rem 0 0.25rem 0;
+}
+.card p {
+  font-size: 0.875rem;
+  color: #555;
+  margin-bottom: 0.75rem;
+}
+
 /* Video Cards */
 .video-card {
   background: #fff;
@@ -126,6 +156,13 @@ h1, h2 {
   text-decoration: underline;
 }
 
+/* Counters */
+.counter-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
 /* Footer */
 footer {
   text-align: center;
@@ -145,13 +182,27 @@ footer {
 </header>
 
 <!-- Hero -->
-<section class="px-4 py-24 max-w-4xl mx-auto text-center" data-aos="fade-up">
+<section class="px-4 py-24 max-w-6xl mx-auto text-center" data-aos="fade-up">
   <h2 class="hero-title mb-6">Crafting, Tail Making, Mask Making & More</h2>
   <p class="text-lg mb-6">Explore our channel for tutorials, creative videos, and community fun. Discover the art of furry crafting in a techy, forest-inspired environment.</p>
   <div class="video-wrapper mb-6">
     <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Featured Video" allowfullscreen></iframe>
   </div>
   <a href="https://www.youtube.com/@thelonewolf-AS" target="_blank" class="btn-primary">Subscribe on YouTube</a>
+</section>
+
+<!-- Current Tail & Mask -->
+<section class="px-4 py-24 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8" data-aos="fade-up">
+  <div class="card">
+    <img src="https://placehold.co/400x300/10b981/ffffff?text=Current+Tail" alt="Current Tail">
+    <h3>Current Tail</h3>
+    <p>Elegant forest-themed tail with playful accents.</p>
+  </div>
+  <div class="card">
+    <img src="https://placehold.co/400x300/3b82f6/ffffff?text=Current+Mask" alt="Current Mask">
+    <h3>Current Mask</h3>
+    <p>Mystical wolf mask perfect for crafting showcases.</p>
+  </div>
 </section>
 
 <!-- Curated Videos -->
@@ -198,6 +249,34 @@ footer {
   </div>
 </section>
 
+<!-- Fun Stats / Counters -->
+<section class="px-4 py-24 max-w-6xl mx-auto" data-aos="fade-up">
+  <h2 class="text-3xl font-bold text-center mb-12">Fun Stats</h2>
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+
+    <div class="counter-card card p-6">
+      <div class="text-3xl font-bold text-green-500" data-count="150">0</div>
+      <p>Videos Uploaded</p>
+    </div>
+
+    <div class="counter-card card p-6">
+      <div class="text-3xl font-bold text-amber-500" data-count="42">0</div>
+      <p>Projects Completed</p>
+    </div>
+
+    <div class="counter-card card p-6">
+      <div class="text-3xl font-bold text-blue-500" data-count="12">0</div>
+      <p>Years of Crafting</p>
+    </div>
+
+    <div class="counter-card card p-6">
+      <div class="text-3xl font-bold text-purple-500" data-count="2000">0</div>
+      <p>Subscribers</p>
+    </div>
+
+  </div>
+</section>
+
 <!-- About -->
 <section class="px-4 py-24 max-w-4xl mx-auto text-center" data-aos="fade-up">
   <h2 class="text-3xl font-bold mb-6">About The Channel</h2>
@@ -221,8 +300,31 @@ footer {
 </footer>
 
 <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-  AOS.init({duration:800, easing:'ease-in-out', once:true});
+// Year
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// AOS animations
+AOS.init({duration:800, easing:'ease-in-out', once:true});
+
+// Animate counters
+function animateCounters() {
+  const counters = document.querySelectorAll('[data-count]');
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-count');
+      const count = +counter.innerText;
+      const increment = Math.ceil(target / 100);
+      if(count < target) {
+        counter.innerText = count + increment;
+        setTimeout(updateCount, 20);
+      } else {
+        counter.innerText = target;
+      }
+    };
+    updateCount();
+  });
+}
+window.addEventListener('load', animateCounters);
 </script>
 
 </body>
