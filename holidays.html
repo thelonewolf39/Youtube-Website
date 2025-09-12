@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Lone Wolf - Halloween Limited Editions</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Creepster&family=Open+Sans&display=swap" rel="stylesheet">
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<style>
+/* General Body */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #1a1a1a;
+  color: #f5f3f0;
+  scroll-behavior: smooth;
+  background-image: url('images/bats.png'), url('images/pumpkins.png');
+  background-repeat: repeat, repeat;
+  background-size: 100px, 80px;
+}
+
+/* Header */
+header {
+  background-color: #111;
+  padding: 1rem;
+  text-align: center;
+  position: sticky;
+  top:0;
+  z-index: 50;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+}
+header h1 {
+  font-family: 'Creepster', cursive;
+  font-size: 2.5rem;
+  color: #f97316;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(26,26,26,0.7)), url('images/haunted-forest.jpg') no-repeat center/cover;
+  border-radius: 1rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  color: #f5f3f0;
+}
+.hero h2 {
+  font-family: 'Creepster', cursive;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #f97316;
+}
+.hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Section Headers */
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  margin: 3rem 0 2rem 0;
+  color: #f97316;
+}
+
+/* Cards */
+.card {
+  background-color: #222;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+.card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(249, 115, 22, 0.7);
+}
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #444;
+}
+.card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0.75rem 0 0.25rem 0;
+}
+.card p {
+  font-size: 0.875rem;
+  color: #ddd;
+  margin-bottom: 0.75rem;
+}
+.btn-download {
+  display: inline-block;
+  background: #f97316;
+  color: #111;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.btn-download:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(249,115,22,0.5);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #ccc;
+  background-color: #111;
+  margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Halloween Limited Editions</h1>
+</header>
+
+<section class="hero" data-aos="fade-up">
+  <h2>Spooky Wolf Collection</h2>
+  <p>Celebrate Halloween with exclusive wolf-themed stickers, coloring sheets, posters, and activity pages! Download your favorites and join the fun.</p>
+</section>
+
+<!-- Sticker Sheets -->
+<section class="px-4 max-w-6xl mx-auto" data-aos="fade-up">
+  <h2 class="section-title">Sticker Sheets</h2>
+  <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+
+    <div class="card">
+      <img src="images/sticker-vampire-wolf.png" alt="Vampire Wolf">
+      <h3>Vampire Wolf</h3>
+      <p>Wolves in costume: vampire wolf</p>
+      <a href="coloringsheets/sticker-vampire-wolf.pdf" download class="btn-download">Download PDF</a>
+    </div>
+
+    <div class="card">
+      <img src="images/sticker-owl.png" alt="Spooky Owl">
+      <h3>Spooky Forest Critters</h3>
+      <p>Owls, bats, black cats</p>
+      <a href="coloringsheets/sticker-forest-critters.pdf" download class="btn-download">Download PDF</a>
+    </div>
+
+    <div class="card">
+      <img src="images/sticker-pumpkins.png" alt="Mini Haunted Items">
+      <h3>Mini Haunted Items</h3>
+      <p>Pumpkins, cauldrons, potion bottles</p>
+      <a href="coloringsheets/sticker-mini-haunted.pdf" download class="btn-download">Download PDF</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Coloring Sheets -->
+<section class="px-4 max-w-6xl mx-auto" data-aos="fade-up">
+  <h2 class="section-title">Coloring Sheets</h2>
+  <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+
+    <div class="card">
+      <img src="images/coloring-haunted-forest.png" alt="Haunted Forest">
+      <h3>Haunted Forest</h3>
+      <p>Lone wolf exploring a spooky forest</p>
+      <a href="coloringsheets/haunted-forest.pdf" download class="btn-download">Download PDF</a>
+    </div>
+
+    <div class="card">
+      <img src="images/coloring-jack-o-lantern.png" alt="Wolves with Jack-o'-Lanterns">
+      <h3>Wolves with Jack-o'-Lanterns</h3>
+      <p>Fun Halloween-themed wolf coloring</p>
+      <a href="coloringsheets/wolves-jack-o-lanterns.pdf" download class="btn-download">Download PDF</a>
+    </div>
+
+    <div class="card">
+      <img src="images/coloring-trick-or-treat.png" alt="Trick-or-Treating Wolves">
+      <h3>Trick-or-Treating Wolves</h3>
+      <p>Wolf pups enjoying Halloween night</p>
+      <a href="coloringsheets/trick-or-treat-wolves.pdf" download class="btn-download">Download PDF</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Posters -->
+<section class="px-4 max-w-6xl mx-auto" data-aos="fade-up">
+  <h2 class="section-title">Posters</h2>
+  <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+
+    <div class="card">
+      <img src="images/poster-pumpkin-moon.png" alt="Pumpkin Moon Wolves">
+      <h3>Wolves Howling at Pumpkin Moon</h3>
+      <a href="posters/wolves-pumpkin-moon.pdf" download class="btn-download">Download PDF</a>
+    </div>
+
+    <div class="card">
+      <img src="images/poster-haunted-forest.png" alt="Misty Forest Wolves">
+      <h3>Misty Forest Wolves</h3>
+      <a href="posters/misty-forest-wolves.pdf" download class="btn-download">Download PDF</a>
+    </div>
+
+    <div class="card">
+      <img src="images/poster-happy-halloween.png" alt="Happy Howl-o-ween">
+      <h3>Happy Howl-o-ween Poster</h3>
+      <a href="posters/happy-halloween.pdf" download class="btn-download">Download PDF</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Activity Sheets / Puzzles -->
+<section class="px-4 max-w-6xl mx-auto" data-aos="fade-up">
+  <h2 class="section-title">Activity Sheets / Puzzles</h2>
+  <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+
+    <div class="card">
+      <img src="images/activity-maze.png" alt="Wolf Maze">
+      <h3>Wolf Maze</h3>
+      <p>Guide the wolf through the haunted forest</p>
+      <a href="activities/wolf-maze.pdf" download class="btn-download">Download PDF</a>
+    </div>
+
+    <div class="card">
+      <img src="images/activity-word-search.png" alt="Word Search">
+      <h3>Halloween Word Search</h3>
+      <p>Find wolf-themed Halloween words</p>
+      <a href="activities/word-search.pdf" download class="btn-download">Download PDF</a>
+    </div>
+
+    <div class="card">
+      <img src="images/activity-dot-to-dot.png" alt="Dot to Dot">
+      <h3>Spooky Wolf Dot-to-Dot</h3>
+      <a href="activities/dot-to-dot.pdf" download class="btn-download">Download PDF</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Optional Extras / Limited Editions -->
+<section class="px-4 max-w-6xl mx-auto mb-12" data-aos="fade-up">
+  <h2 class="section-title">Optional Extras / Limited Editions</h2>
+  <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+
+    <div class="card">
+      <img src="images/wallpaper-glow.png" alt="Glow-in-the-dark Wallpaper">
+      <h3>Glow-in-the-Dark Wallpapers</h3>
+      <a href="extras/glow-wallpaper.zip" download class="btn-download">Download ZIP</a>
+    </div>
+
+    <div class="card">
+      <img src="images/sticker-animated-bat.png" alt="Animated Stickers">
+      <h3>Animated Stickers</h3>
+      <a href="extras/animated-stickers.zip" download class="btn-download">Download ZIP</a>
+    </div>
+
+    <div class="card">
+      <img src="images/badge-collectible.png" alt="Collectible Badge">
+      <h3>Collectible Badges</h3>
+      <a href="extras/badges.zip" download class="btn-download">Download ZIP</a>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  &copy; <span id="year"></span> The Lone Wolf. All rights reserved.
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+AOS.init({duration:800, easing:'ease-in-out', once:true});
+</script>
+
+</body>
+</html>
