@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lone Wolf Posters</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #fefcf5;
+  color: #1f2937;
+  scroll-behavior: smooth;
+}
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #1f2937;
+}
+
+.card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  padding: 1rem;
+}
+.card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 0.75rem;
+  border-radius: 0.75rem;
+}
+.card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.card a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(90deg, #10b981, #3b82f6);
+  color: white;
+  font-weight: 600;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.card a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(16, 185, 129, 0.5);
+}
+
+header {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #10b981, #3b82f6);
+  color: white;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: #555;
+  background-color: #e7e5e4;
+  margin-top: 3rem;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Lone Wolf Posters</h1>
+  <p>Download wolf-themed posters to decorate your space!</p>
+</header>
+
+<main class="px-4 py-12 max-w-6xl mx-auto">
+  <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+
+    <!-- Example Poster Card -->
+    <div class="card">
+      <img src="posters/forest-wolf-thumbnail.png" alt="Forest Wolf Poster">
+      <h3>Main Poster</h3>
+      <a href="posters/forest-wolf.pdf" target="_blank">Download PDF →</a>
+    </div>
+
+    <!-- Add more poster cards below -->
+    <!-- <div class="card">
+      <img src="posters/NAME-thumbnail.png" alt="NAME Poster">
+      <h3>NAME</h3>
+      <a href="posters/NAME.pdf" target="_blank">Download PDF →</a>
+    </div> -->
+
+  </div>
+</main>
+
+<footer>
+  &copy; <span id="year"></span> The Lone Wolf. All rights reserved.
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
